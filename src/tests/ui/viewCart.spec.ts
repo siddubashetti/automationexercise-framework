@@ -12,4 +12,9 @@ test("view cart details", async ({ page }) => {
 
     await viewCart.navigateToViewCartPage()
     await viewCart.viewCartItems()
+
+    // await product.navigateToProductPage()
+    // await product.viewProductDetails()
+
+
 })

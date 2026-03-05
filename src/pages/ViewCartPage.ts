@@ -7,6 +7,8 @@ export class ViewcartPage extends BasePage {
     readonly cartItem = '[class="cart_description"]'
     readonly cartRemoveButton = '[class="cart_quantity_delete"]'
     readonly checkout = '[class="btn btn-default check_out"]'
+    readonly commentBox = '[class="form-control"]'
+    readonly placeOrder = '[class="btn btn-default check_out"]'
 
     // Step 2: constructor
     constructor(page: Page) {
@@ -25,5 +27,13 @@ export class ViewcartPage extends BasePage {
         await this.clickElement(this.cartRemoveButton)
         await expect(this.page.locator(this.checkout)).toBeVisible()
         await expect(this.page.getByText('Cart is empty!')).toBeVisible()
+    }
+
+    async checkoutPage() {
+        await expect(this.page.locator(this.cartItem)).toBeVisible()
+        await this.clickElement(this.checkout)
+        await this.enterText(this.commentBox, 'Nice Product')
+        await this.clickElement(this.placeOrder)
+        await expect(this.page.getByText('Payment')).toBeVisible()
     }
 }
