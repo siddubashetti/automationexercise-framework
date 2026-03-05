@@ -15,8 +15,8 @@ export class PaymentPage extends BasePage {
     }
 
     // Step 3: navigate to Payment page
-    // async navigateToViewCartPage() {
-    //     await this.navigateTo('/view_cart')
+    // async navigateToPaymentPage() {
+    //     await this.navigateTo('/payment')
     // }
 
     async paymentDetails(name: string, cardNum: string, cvv: string, month: string, year: string) {
