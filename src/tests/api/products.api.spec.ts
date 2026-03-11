@@ -1,6 +1,6 @@
 import { test, expect, request } from '@playwright/test'
 
-test.describe('Products API', () => {
+test.describe.serial('Products API', () => {
 
     // Dynamic email — changes every test run!
     const uniqueEmail = `testuser${Date.now()}@gmail.com`

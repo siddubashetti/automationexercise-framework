@@ -25,6 +25,13 @@ export class ProductPage extends BasePage {
 
     async viewProductDetails() {
         await this.clickElement(this.productsMenuLink)
+
+        // Wait for page to fully load
+        await this.page.waitForLoadState('networkidle')
+
+        // Close ad before checking products
+        await this.closeAdIfPresent()
+
         await expect(this.page.locator(this.searchField)).toBeVisible()
         await expect(this.page.locator(this.submitButton)).toBeVisible()
         // there are a multiple values are there , therefore we have to use this
