@@ -48,7 +48,17 @@ export class ProductPage extends BasePage {
         // Wait a moment for modal to appear
         await this.page.waitForTimeout(2000)
 
-        await this.page.locator(this.continueShopping).click({ force: true })
+        // Only click continueShopping if modal is visible!
+        const modal = this.page.locator(this.continueShopping)
+        if (await modal.isVisible()) {
+            await modal.click({ force: true })
+        } else {
+            // Modal didn't open — try clicking add to cart again
+            await this.page.locator(this.addToCart).first().click({ force: true })
+            await this.page.waitForTimeout(2000)
+            await this.closeAdIfPresent()
+            await modal.click({ force: true })
+        }
     }
 
     async searchProduct(productName: string) {
