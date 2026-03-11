@@ -33,12 +33,22 @@ export class ProductPage extends BasePage {
             .count()
         expect(productCount).toBeGreaterThan(0)
 
-        // Close ad first!
+        // Close ad before clicking
         await this.closeAdIfPresent()
 
-        // force: true → bypasses any overlay blocking click!
+        // Force click add to cart
         await this.page.locator(this.addToCart).first().click({ force: true })
 
+        // Wait a moment for modal to appear
+        await this.page.waitForTimeout(2000)
+
+        // Close ad again if it appeared after click
+        await this.closeAdIfPresent()
+
+        // Wait a moment for modal to appear
+        await this.page.waitForTimeout(2000)
+
+        // Now check success message
         await expect(this.page.getByText('Your product has been added to cart.')).toBeVisible()
         await this.clickElement(this.continueShopping)
     }
