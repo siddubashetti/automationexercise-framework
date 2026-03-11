@@ -20,6 +20,7 @@ export class ProductPage extends BasePage {
     // Step 3: navigate to register page
     async navigateToProductPage() {
         await this.navigateTo('/products')
+        await this.closeAdIfPresent()   // to close the ad 
     }
 
     async viewProductDetails() {

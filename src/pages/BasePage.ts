@@ -60,4 +60,17 @@ export class BasePage {
         return await this.page.isVisible(locator)
     }
 
+    //To Close the perticular ad , when we are trying to serach in search field
+    async closeAdIfPresent() {
+        try {
+            const closeBtn = this.page.locator('[id="dismiss-button"]')
+            if (await closeBtn.isVisible({ timeout: 3000 })) {
+                await closeBtn.click()
+                console.log('Ad closed!')
+            }
+        } catch {
+            console.log('No ad found, continuing...')
+        }
+    }
+
 }

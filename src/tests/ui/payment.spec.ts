@@ -5,7 +5,7 @@ import { ProductPage } from '../../pages/ProductsPage'
 import { LoginPage } from '../../pages/LoginPage'
 import { PaymentPage } from '../../pages/PaymentPage'
 
-test("Checkout Page details", async ({ page }) => {
+test("Payment Page details", async ({ page }) => {
     const checkout = new CheckoutPage(page)
     const viewCart = new ViewcartPage(page)
     const product = new ProductPage(page)
