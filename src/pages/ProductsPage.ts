@@ -32,7 +32,13 @@ export class ProductPage extends BasePage {
             .locator(this.firstProduct)
             .count()
         expect(productCount).toBeGreaterThan(0)
-        await this.page.locator(this.addToCart).first().click()
+
+        // Close ad first!
+        await this.closeAdIfPresent()
+
+        // force: true → bypasses any overlay blocking click!
+        await this.page.locator(this.addToCart).first().click({ force: true })
+
         await expect(this.page.getByText('Your product has been added to cart.')).toBeVisible()
         await this.clickElement(this.continueShopping)
     }
