@@ -23,6 +23,7 @@ export class RegisterPage extends BasePage {
     async enterSignupDetails(name: string, email: string) {
         await this.enterText(this.signUpName, name)
         await this.enterText(this.signUpEmail, email)
+        await this.closeAdIfPresent()
         await this.clickElement(this.signUpButton)
 
     }

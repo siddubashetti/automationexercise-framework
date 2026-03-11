@@ -22,9 +22,10 @@ export class LoginPage extends BasePage {
 
     // login method
     async login(email: string, password: string) {
-        // hint: use enterText and clickElement from BasePage
+        // used enterText and clickElement from BasePage
         await this.enterText(this.emailInput, email)
         await this.enterText(this.passwordInput, password)
+        await this.closeAdIfPresent()   // to close the ad
         await this.clickElement(this.loginButton)
     }
 
