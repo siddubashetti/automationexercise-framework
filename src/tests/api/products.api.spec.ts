@@ -2,6 +2,9 @@ import { test, expect, request } from '@playwright/test'
 
 test.describe('Products API', () => {
 
+    // Dynamic email — changes every test run!
+    const uniqueEmail = `testuser${Date.now()}@gmail.com`
+
     // Test 1: GET products → 200
     test('GET all products should return 200', async ({ request }) => {
         const response = await request.get('https://automationexercise.com/api/productsList')
@@ -138,7 +141,7 @@ test.describe('Products API', () => {
             'https://automationexercise.com/api/createAccount', {
             form: {
                 name: 'Siddu',
-                email: 'siddu1234@gmail.com',   // use unique email!
+                email: uniqueEmail,  // ← dynamic!
                 password: 'Siddu1234',
                 day: '12',
                 month: '2',
@@ -175,7 +178,7 @@ test.describe('Products API', () => {
         const response = await request.delete(
             'https://automationexercise.com/api/deleteAccount', {
             form: {
-                email: 'siddu1234@gmail.com',      // use the email you just created!
+                email: uniqueEmail,  // ← dynamic!
                 password: 'Siddu1234'
             }
         })
