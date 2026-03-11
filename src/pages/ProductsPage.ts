@@ -23,49 +23,28 @@ export class ProductPage extends BasePage {
         await this.closeAdIfPresent()   // to close the ad 
     }
 
+
     async viewProductDetails() {
         await this.clickElement(this.productsMenuLink)
-
-        // Wait for page to fully load
         await this.page.waitForLoadState('networkidle')
-
-        // Close ad before checking products
         await this.closeAdIfPresent()
 
         await expect(this.page.locator(this.searchField)).toBeVisible()
         await expect(this.page.locator(this.submitButton)).toBeVisible()
-        // there are a multiple values are there , therefore we have to use this
+
         const productCount = await this.page
             .locator(this.firstProduct)
             .count()
         expect(productCount).toBeGreaterThan(0)
 
-        // Close ad before clicking
         await this.closeAdIfPresent()
 
         // Force click add to cart
         await this.page.locator(this.addToCart).first().click({ force: true })
 
-        // Wait a moment for modal to appear
-        await this.page.waitForTimeout(2000)
-
-        // Close ad again if it appeared after click
-        await this.closeAdIfPresent()
-
-        // Wait a moment for modal to appear
-        await this.page.waitForTimeout(2000)
-
-        // Only click continueShopping if modal is visible!
-        const modal = this.page.locator(this.continueShopping)
-        if (await modal.isVisible()) {
-            await modal.click({ force: true })
-        } else {
-            // Modal didn't open — try clicking add to cart again
-            await this.page.locator(this.addToCart).first().click({ force: true })
-            await this.page.waitForTimeout(2000)
-            await this.closeAdIfPresent()
-            await modal.click({ force: true })
-        }
+        // Don't wait for modal — just navigate directly to cart!
+        await this.page.goto('/view_cart')
+        await this.page.waitForLoadState('networkidle')
     }
 
     async searchProduct(productName: string) {
