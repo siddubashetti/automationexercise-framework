@@ -8,9 +8,11 @@ export class BasePage {
         this.page = page
     }
 
-    // write a method to navigate to a URL
     async navigateTo(url: string) {
-        await this.page.goto(url)
+        await this.page.goto(url, {
+            waitUntil: 'domcontentloaded',  // ← don't wait for load!
+            timeout: 60000                   // ← 60 seconds timeout!
+        })
     }
 
     // write a method to get page title

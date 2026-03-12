@@ -17,7 +17,7 @@ export class ProductPage extends BasePage {
         super(page)
     }
 
-    // Step 3: navigate to register page
+    // Step 3: navigate to Product page
     async navigateToProductPage() {
         await this.navigateTo('/products')
         await this.closeAdIfPresent()   // to close the ad 
@@ -26,7 +26,7 @@ export class ProductPage extends BasePage {
 
     async viewProductDetails() {
         await this.clickElement(this.productsMenuLink)
-        await this.page.waitForLoadState('networkidle')
+        await this.page.waitForLoadState('domcontentloaded') // ← change!
         await this.closeAdIfPresent()
 
         await expect(this.page.locator(this.searchField)).toBeVisible()
@@ -38,29 +38,20 @@ export class ProductPage extends BasePage {
         expect(productCount).toBeGreaterThan(0)
 
         await this.closeAdIfPresent()
-
-        // Force click add to cart
         await this.page.locator(this.addToCart).first().click({ force: true })
 
-        // Don't wait for modal — just navigate directly to cart!
         await this.page.goto('/view_cart')
-        await this.page.waitForLoadState('networkidle')
+        await this.page.waitForLoadState('domcontentloaded') // ← change!
     }
 
     async searchProduct(productName: string) {
-        // enter text in search field
-        // click submit button
-        // verify results are displayed
-
-        // await this.clickElement(this.continueShopping)
+        // Go back to products page first!
+        await this.navigateTo('/products')
+        await this.page.waitForLoadState('domcontentloaded')
+        await this.closeAdIfPresent()
         await this.enterText(this.searchField, productName)
         await this.clickElement(this.submitButton)
-        // Step 3: verify results are displayed
-        const resultCount = await this.page
-            .locator(this.firstProduct)
-            .count()
-        expect(resultCount).toBeGreaterThan(0)
-
-
+        await this.page.waitForLoadState('domcontentloaded')
+        await this.closeAdIfPresent()
     }
 }

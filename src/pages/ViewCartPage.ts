@@ -25,7 +25,7 @@ export class ViewcartPage extends BasePage {
         await expect(this.page.locator(this.cartItem)).toBeVisible()
         //await expect(this.page.locator('Blue Top')).toBeVisible()
         await this.clickElement(this.cartRemoveButton)
-        await expect(this.page.locator(this.checkout)).toBeVisible()
+
         await expect(this.page.getByText('Cart is empty!')).toBeVisible()
     }
 

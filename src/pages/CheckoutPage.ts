@@ -3,7 +3,7 @@ import { BasePage } from './BasePage'
 
 export class CheckoutPage extends BasePage {
 
-    readonly checkout = '[class="btn btn-default check_out"]'
+    readonly checkoutButton = '[class="btn btn-default check_out"]'
     readonly commentBox = '[name="message"]'
     readonly placeOrder = '[href="/payment"]'
     readonly payAndConfirm = '[data-qa="pay-button"]'
@@ -18,20 +18,15 @@ export class CheckoutPage extends BasePage {
     // }
 
     async ProceedcheckoutPage() {
-        // Close ad before clicking checkout
         await this.closeAdIfPresent()
+        await this.clickElement(this.checkoutButton)
 
-        await this.clickElement(this.checkout)
+        // Change networkidle to domcontentloaded!
+        await this.page.waitForLoadState('domcontentloaded')
 
-        // Wait for checkout page to load
-        await this.page.waitForLoadState('networkidle')
-
-        // Close ad again on checkout page
         await this.closeAdIfPresent()
-
         await this.enterText(this.commentBox, 'Nice Product')
         await this.clickElement(this.placeOrder)
-        await this.closeAdIfPresent()
-        await expect(this.page.locator(this.payAndConfirm)).toBeVisible()
+        await expect(this.page.getByText('Pay and Confirm Order')).toBeVisible()
     }
 }

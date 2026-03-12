@@ -1,0 +1,91 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link "Website for automation practice" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "Website for automation practice" [ref=e9]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link " Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e15]: 
+            - text: Home
+        - listitem [ref=e16]:
+          - link " Products" [ref=e17] [cursor=pointer]:
+            - /url: /products
+            - generic [ref=e18]: 
+            - text: Products
+        - listitem [ref=e19]:
+          - link " Cart" [ref=e20] [cursor=pointer]:
+            - /url: /view_cart
+            - generic [ref=e21]: 
+            - text: Cart
+        - listitem [ref=e22]:
+          - link " Signup / Login" [ref=e23] [cursor=pointer]:
+            - /url: /login
+            - generic [ref=e24]: 
+            - text: Signup / Login
+        - listitem [ref=e25]:
+          - link " Test Cases" [ref=e26] [cursor=pointer]:
+            - /url: /test_cases
+            - generic [ref=e27]: 
+            - text: Test Cases
+        - listitem [ref=e28]:
+          - link " API Testing" [ref=e29] [cursor=pointer]:
+            - /url: /api_list
+            - generic [ref=e30]: 
+            - text: API Testing
+        - listitem [ref=e31]:
+          - link " Video Tutorials" [ref=e32] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/AutomationExercise
+            - generic [ref=e33]: 
+            - text: Video Tutorials
+        - listitem [ref=e34]:
+          - link " Contact us" [ref=e35] [cursor=pointer]:
+            - /url: /contact_us
+            - generic [ref=e36]: 
+            - text: Contact us
+  - generic [ref=e38]:
+    - list [ref=e40]:
+      - listitem [ref=e41]:
+        - link "Home" [ref=e42] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e43]: Shopping Cart
+    - paragraph [ref=e46]:
+      - text: Cart is empty! Click
+      - link "here" [ref=e47] [cursor=pointer]:
+        - /url: /products
+      - text: to buy products.
+  - contentinfo [ref=e48]:
+    - generic [ref=e53]:
+      - heading "Subscription" [level=2] [ref=e54]
+      - generic [ref=e55]:
+        - textbox "Your email address" [ref=e56]
+        - button "" [ref=e57] [cursor=pointer]:
+          - generic [ref=e58]: 
+        - paragraph [ref=e59]:
+          - text: Get the most recent updates from
+          - text: our site and be updated your self...
+    - paragraph [ref=e63]: Copyright © 2021 All rights reserved
+  - text: 
+  - insertion [ref=e64]:
+    - iframe [ref=e67]:
+      - iframe [ref=f27e1]:
+        - generic [ref=f28e2]:
+          - link "Advertisement" [ref=f28e4] [cursor=pointer]:
+            - /url: https://ad.doubleclick.net/pcs/click?xai=AKAOjsuZbE2tqrAedWXJDX-Osok5giXdBjGtSHbHQhFfvTME6dqySiA90SulATj4E3A4RkCphfBvxVSQwy1nwD2wBF6ZZUL_Ys7X34rrSzQTEVEa79-3GcoWu91XPO1Gs0L61q2TNJ30XX8JOZxtd1iptswTVQg8gTnjAl0abdq_a0MAfaMLQqRRydL1mWQ2q7STUFd0Kw8va3WVtbqxY02cCFBEo3IskZZ82PZZhMRqgaIINPM5fZkLrvWmSyLOu3BFZ1aS2U_VinuahTQJxxacOoI6t42X69Cs_stkyZj1ynvXcJLckyCjM7_3UR2dAyVKRbhjDS90VNd1QSMpBI50y8eKhuEyd_kcDOujRNC4xEFlvQwqgHbyI6GQdFhF-feCJIacxtmruetRrmgkqkEJnl452ETnNFygIwH1mOZ9YpTgs_vSDB0867PylcVRAuG-x3LeT-YAjnEzxR4h7YzACNKEJ3lop4ScsJ-FoMiMjKbCmr8EvCUr6-F1Eau_GInlBGDoDpmFDvZLmOpLiF2FkgW4DG4Dxq5WBE9W0vfdnlgKIJs7aS8plTWMtu368fCNhyjDQX7AKzhncICgr8uLZQNijkdze4rX-h8dx7UXU9TrZylLw9KMGbTXKbKMhX9hs2cVTZ5tHUhwuagOgTmLRl9fzL6tV81FB6_dwSMWdre8MV98agRN3pkOYnuhGQA7i7FniPu9ct-zMVDFBE5trH5k75tn0yT3wgwNGkypX2elpnaMpja4PEBzLOkkZINiaNzm3OTw9LfqBQA_P5j80jHPa7Kk7PVHiLSVv850sjUMky4woSoqW23BBmTijOpcqSv1E8tTtx5WfrfK0aK7bU2UklGC3SOlw6R4RY8_MyndlSIQCfyIfLSWVLFPS705KPZULHHr-iOW0_OrIEDJVe5d89xhVsHm-LdJ2UOVhPjSx6XI8Qn0JSvk5RbaTpezUwPjq97VHYZJnSSuYSkppwUk3_S0fDSC1oqywILg2wl-gKDZSgzfPyQ8N7o33eimmG_7gffLcPTS89zcm9857ra5iCTebThnCWA5_NO2CqtOq7ok_ecRq7zmHrRuK_aCGzFJn8NiZPTA7WUWPbDYf-bB4o1sBWaeSstHdX6T22riOvZr-bvEgV6U2G3D_1r95xpkqe0FnxAduBZKecpYfSq8sIL0MwRGteWluO3Pij1Gu0dkWHZQSKVNG4ymTzyB1ylAS7x4aVZiR_aUuauZnS3DodEy2gnAyKlcZ0ADrPUIIB6tg7lvhmKdqSC4NXRI7galhbNjE9I96MY1XeEyS59-W14pnVwurB985kLlmVflf2SyRBwUOsGpdN89qxELyFvpyr-RNeZu6QhNuDNr2jWOWj4LGHXlh_IR2k_yVGPO5Z70SQk5ixfvEDnun9O0WqiGicxobJgq5JBWy1fBip24uZIkEs6oI-AmYG6_fTaL_px0ZTZYhEx9O_ZWAQ-TRf2ftxMRmpwWkhqfWoiyBcixrJWYCG2VH1i-9PhC-Og6f47jAraTTR5DxO99Nfm6X9ZNhLmvpunCz7X_rw_w9NmcPl-pKeTeAMIxZhZzpHL0p01Zp37Yg1ak7VYpLUqMPNvDFHNqvLo0qEDO29tAtyumkWdn-nc-DAETI7KzRmwVn8KBRNpVtl9thKvolKNkQZM41pnJECVsuSQ_NyMVA_-oKCB5AW33R4fP3EgcTSmwXzR1UXsGSKsaQOZLP96yKJb27xZ7IjWOSR76TP3qOGmXH8nZfITv95mnWKHebvCVBEkQDrR1HhphnUxKyZzTkgRxNqJVaamGT4DOmfYw4TGixZOZ4OuKIoFkyGVsAnZ-WfOdz6hGUeSQjBXGLtbPlM9jwUnNFL0X1RAZK4T6qVVSxg2OyDHL19__ODb_izU&sai=AMfl-YQ_MQJ9yrrigLCXw06tp8SHG7TW5DY1DnUy7xUb5h6Ri2oFcAuHHDnk2ndDs1VyxBJCnQe2FNj70gsEC1Hb8PB0QCWsLvExgWFeE5GntbhnWWrsICeQKckO1dsvhyTwgvYnkC-t0BvkcU7xNBmSMNrfHyOJrenFlfwaNT3VU2cXIhypLryvU-ncw-7q78FL7mAMXfuw-4COmrhwDZr5BPIaO-0Wf_Evt0J1TaGDBXSwRX75M_ZGmkpuCAGbsjQ1O59BGJpj9OisNXGrHJC2L2PylILQMNddlthoUbjdn1v949vQyniK9Q-Y6KLIjeI-46hFqwMpV3I2dApDMoZ4G2qgK3cIGRofP8M79ZxCIR0Ncaqgnt-6n7WAHg8AqSh0cPz7kXzAPp5E0LG0mkmlVGQyuogVlHpkoMvRImRsMZKoUHozpLTxkLmm7yLqZXt-I7baEJzmlV1lx0tVAYGwSaMfLNo9NBKvUj00CiZKdlXwpCL9xDWDAPRx8ynkkH-dKVKcgFglNaZ8PiLTMt632W78oX8XtLEn4MKwLToURUJexcaDFmbr2II3SbvPfGCdjgAAqfrfgylx9cYWNFJPwiwMNK9IcY5PCgWgyu7cE6R6njATA2aCIlds9os4Pm9ePYp1UVcATuqdn8X6yxkoDhUwunHZ8UP7yyd4yHF3uFhnTKwPHkNED-a6ezv49A7gwU_EVh0Ss7OReihWxmKDMp0K1Spl85JqIG7-KMQn5pT39zZgWWVnstr0WvgcOSQTnoHejl95tLodNQIsFRNes8XtiZwAkw8Lmin6-yGAgADGhvRMi4AYXu_jBG1CB4nL2Y16P1U&sig=Cg0ArKJSzIJxCL8DBkVO&fbs_aeid=%5Bgw_fbsaeid%5D&crd=aHR0cHM6Ly96ZWJyYS5jb20&urlfix=1&adurl=https://www.zebra.com/ap/en/cpn/manufacturing-intelligent-operations.html%3Futm_source%3Dprogrammatic%26utm_medium%3Ddisplay%26utm_campaign%3DBrand%2BActivation%26tactic_type%3DADE%25C2%25A0%25C2%25A0%26tactic_detail%3DMF%25C2%25A0_AV_AB_BetterBeginsNow_Banner%25C2%25A0%2Ben%25C2%25A0_APAC%25C2%25A0_IN%26dclid%3D%25edclid!%26gad_source%3D7%26gad_campaignid%3D23599295690
+            - img "Advertisement" [ref=f28e5]
+          - generic [ref=f28e6]:
+            - generic:
+              - img [ref=f28e10] [cursor=pointer]
+              - button [ref=f28e12] [cursor=pointer]:
+                - img [ref=f28e13]
+  - generic [ref=e68]:
+    - generic [ref=e69] [cursor=pointer]:
+      - img [ref=e71]
+      - link "Go to shopping options for Commercial Shopping Carts" [ref=e73]: Commercial Shopping Carts
+    - button "Close shopping anchor" [ref=e74]
+```

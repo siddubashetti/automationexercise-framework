@@ -1,0 +1,97 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link "Website for automation practice" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "Website for automation practice" [ref=e9]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link " Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e15]: 
+            - text: Home
+        - listitem [ref=e16]:
+          - link " Products" [ref=e17] [cursor=pointer]:
+            - /url: /products
+            - generic [ref=e18]: 
+            - text: Products
+        - listitem [ref=e19]:
+          - link " Cart" [ref=e20] [cursor=pointer]:
+            - /url: /view_cart
+            - generic [ref=e21]: 
+            - text: Cart
+        - listitem [ref=e22]:
+          - link " Logout" [ref=e23] [cursor=pointer]:
+            - /url: /logout
+            - generic [ref=e24]: 
+            - text: Logout
+        - listitem [ref=e25]:
+          - link " Delete Account" [ref=e26] [cursor=pointer]:
+            - /url: /delete_account
+            - generic [ref=e27]: 
+            - text: Delete Account
+        - listitem [ref=e28]:
+          - link " Test Cases" [ref=e29] [cursor=pointer]:
+            - /url: /test_cases
+            - generic [ref=e30]: 
+            - text: Test Cases
+        - listitem [ref=e31]:
+          - link " API Testing" [ref=e32] [cursor=pointer]:
+            - /url: /api_list
+            - generic [ref=e33]: 
+            - text: API Testing
+        - listitem [ref=e34]:
+          - link " Video Tutorials" [ref=e35] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/AutomationExercise
+            - generic [ref=e36]: 
+            - text: Video Tutorials
+        - listitem [ref=e37]:
+          - link " Contact us" [ref=e38] [cursor=pointer]:
+            - /url: /contact_us
+            - generic [ref=e39]: 
+            - text: Contact us
+        - listitem [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]: 
+            - text: Logged in as Siddu
+  - generic [ref=e44]:
+    - list [ref=e46]:
+      - listitem [ref=e47]:
+        - link "Home" [ref=e48] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e49]: Payment
+    - heading "Payment" [level=2] [ref=e51]
+    - generic [ref=e55]:
+      - generic:
+        - generic [ref=e56]:
+          - generic [ref=e57]: Name on Card
+          - textbox [ref=e58]
+        - generic [ref=e59]:
+          - generic [ref=e60]: Card Number
+          - textbox [ref=e61]
+        - generic:
+          - generic [ref=e62]:
+            - generic [ref=e63]: CVC
+            - textbox "ex. 311" [ref=e64]
+          - generic [ref=e65]:
+            - generic [ref=e66]: Expiration
+            - textbox "MM" [ref=e67]
+          - textbox "YYYY" [ref=e70]
+        - button "Pay and Confirm Order" [ref=e72] [cursor=pointer]
+  - contentinfo [ref=e74]:
+    - generic [ref=e79]:
+      - heading "Subscription" [level=2] [ref=e80]
+      - generic [ref=e81]:
+        - textbox "Your email address" [ref=e82]
+        - button "" [ref=e83] [cursor=pointer]:
+          - generic [ref=e84]: 
+        - paragraph [ref=e85]:
+          - text: Get the most recent updates from
+          - text: our site and be updated your self...
+    - paragraph [ref=e89]: Copyright © 2021 All rights reserved
+  - text: 
+  - insertion [ref=e91]
+```
