@@ -4,6 +4,10 @@ pipeline {
     tools {
         allure 'allure'
     }
+    
+    environment {
+        CI = 'true'
+    }
 
     stages {
 
