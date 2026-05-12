@@ -1,0 +1,139 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link "Website for automation practice" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "Website for automation practice" [ref=e9]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link " Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e15]: 
+            - text: Home
+        - listitem [ref=e16]:
+          - link " Products" [ref=e17] [cursor=pointer]:
+            - /url: /products
+            - generic [ref=e18]: 
+            - text: Products
+        - listitem [ref=e19]:
+          - link " Cart" [ref=e20] [cursor=pointer]:
+            - /url: /view_cart
+            - generic [ref=e21]: 
+            - text: Cart
+        - listitem [ref=e22]:
+          - link " Logout" [ref=e23] [cursor=pointer]:
+            - /url: /logout
+            - generic [ref=e24]: 
+            - text: Logout
+        - listitem [ref=e25]:
+          - link " Delete Account" [ref=e26] [cursor=pointer]:
+            - /url: /delete_account
+            - generic [ref=e27]: 
+            - text: Delete Account
+        - listitem [ref=e28]:
+          - link " Test Cases" [ref=e29] [cursor=pointer]:
+            - /url: /test_cases
+            - generic [ref=e30]: 
+            - text: Test Cases
+        - listitem [ref=e31]:
+          - link " API Testing" [ref=e32] [cursor=pointer]:
+            - /url: /api_list
+            - generic [ref=e33]: 
+            - text: API Testing
+        - listitem [ref=e34]:
+          - link " Video Tutorials" [ref=e35] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/AutomationExercise
+            - generic [ref=e36]: 
+            - text: Video Tutorials
+        - listitem [ref=e37]:
+          - link " Contact us" [ref=e38] [cursor=pointer]:
+            - /url: /contact_us
+            - generic [ref=e39]: 
+            - text: Contact us
+        - listitem [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]: 
+            - text: Logged in as Siddu
+  - generic [ref=e44]:
+    - list [ref=e46]:
+      - listitem [ref=e47]:
+        - link "Home" [ref=e48] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e49]: Checkout
+    - heading "Address Details" [level=2] [ref=e51]
+    - generic [ref=e53]:
+      - list [ref=e55]:
+        - listitem [ref=e56]:
+          - heading "Your delivery address" [level=3] [ref=e57]
+        - listitem [ref=e58]: Mr. Siddu Bashetti
+        - listitem
+        - listitem [ref=e59]: abc 123 Bangalore
+        - listitem
+        - listitem [ref=e60]: bangalore karnataka 546664
+        - listitem [ref=e61]: India
+        - listitem [ref=e62]: "1234567890"
+      - list [ref=e64]:
+        - listitem [ref=e65]:
+          - heading "Your billing address" [level=3] [ref=e66]
+        - listitem [ref=e67]: Mr. Siddu Bashetti
+        - listitem
+        - listitem [ref=e68]: abc 123 Bangalore
+        - listitem
+        - listitem [ref=e69]: bangalore karnataka 546664
+        - listitem [ref=e70]: India
+        - listitem [ref=e71]: "1234567890"
+    - heading "Review Your Order" [level=2] [ref=e73]
+    - table [ref=e75]:
+      - rowgroup [ref=e76]:
+        - row "Item Description Price Quantity Total" [ref=e77]:
+          - cell "Item" [ref=e78]
+          - cell "Description" [ref=e79]
+          - cell "Price" [ref=e80]
+          - cell "Quantity" [ref=e81]
+          - cell "Total" [ref=e82]
+          - cell [ref=e83]
+      - rowgroup [ref=e84]:
+        - row "Product Image Blue Top Women > Tops Rs. 500 7 Rs. 3500" [ref=e85]:
+          - cell "Product Image" [ref=e86]:
+            - link "Product Image" [ref=e87] [cursor=pointer]:
+              - /url: ""
+              - img "Product Image" [ref=e88]
+          - cell "Blue Top Women > Tops" [ref=e89]:
+            - heading "Blue Top" [level=4] [ref=e90]:
+              - link "Blue Top" [ref=e91] [cursor=pointer]:
+                - /url: /product_details/1
+            - paragraph [ref=e92]: Women > Tops
+          - cell "Rs. 500" [ref=e93]:
+            - paragraph [ref=e94]: Rs. 500
+          - cell "7" [ref=e95]:
+            - button "7" [ref=e96] [cursor=pointer]
+          - cell "Rs. 3500" [ref=e97]:
+            - paragraph [ref=e98]: Rs. 3500
+        - row "Total Amount Rs. 3500" [ref=e99]:
+          - cell [ref=e100]
+          - cell [ref=e101]
+          - cell "Total Amount" [ref=e102]:
+            - heading "Total Amount" [level=4] [ref=e103]
+          - cell "Rs. 3500" [ref=e104]:
+            - paragraph [ref=e105]: Rs. 3500
+    - generic [ref=e106]:
+      - generic [ref=e107]: If you would like to add a comment about your order, please write it in the field below.
+      - textbox [ref=e108]
+    - link "Place Order" [ref=e110] [cursor=pointer]:
+      - /url: /payment
+  - contentinfo [ref=e111]:
+    - generic [ref=e116]:
+      - heading "Subscription" [level=2] [ref=e117]
+      - generic [ref=e118]:
+        - textbox "Your email address" [ref=e119]
+        - button "" [ref=e120] [cursor=pointer]:
+          - generic [ref=e121]: 
+        - paragraph [ref=e122]:
+          - text: Get the most recent updates from
+          - text: our site and be updated your self...
+    - paragraph [ref=e126]: Copyright © 2021 All rights reserved
+  - text: 
+```

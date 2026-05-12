@@ -194,4 +194,21 @@ test.describe.serial('Products API', () => {
         // Step 4: check message contains 'Account deleted!'
         expect(body.message).toContain('Account deleted!')
     })
+
+    test("", async ({ request }) => {
+        const response = await request.get("")
+        const response2 = await request.post("", {
+            data: {
+                email: "sidd@gmail.com",
+                password: '1234'
+            }
+        })
+        expect(response.status()).toBe(200)
+
+        const body = await response.json()
+        console.log(JSON.stringify(body, null, 2))
+        expect(body.responseCode).toBe(200)
+        expect(body.message).toContain("")
+
+    })
 })  
