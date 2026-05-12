@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        allure 'allure'
+    }
+
     stages {
 
         stage('Checkout') {
@@ -31,7 +35,11 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: 'allure-report/**'
+            allure([
+                includeProperties: false,
+                jdk: '',
+                results: [[path: 'allure-results']]
+            ])
         }
     }
 }
