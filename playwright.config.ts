@@ -34,12 +34,12 @@ export default defineConfig({
     actionTimeout: 15000, // 15s is usually plenty; if it takes longer, something is wrong
     navigationTimeout: 30000,
     screenshot: 'only-on-failure',
-    video: 'on-first-retry',
+    video: 'retain-on-failure',
     // headless: true,
-    headless: false,
+    headless: !!process.env.CI,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+    trace: 'retain-on-failure',
   },
 
   /* Configure projects for major browsers */
